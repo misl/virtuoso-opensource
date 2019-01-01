@@ -32,6 +32,8 @@ import java.sql.ResultSetMetaData;
 
 import virtuoso.sql.*;
 
+import org.apache.jena.atlas.json.JsonArray;
+import org.apache.jena.atlas.json.JsonObject;
 import org.apache.jena.graph.NodeFactory;
 import org.apache.jena.shared.*;
 import org.apache.jena.query.Query;
@@ -331,6 +333,13 @@ public class VirtuosoQueryExecution implements QueryExecution {
         return ret;
     }
 
+    public JsonArray execJson() {
+        throw new JenaException("Unsupported Operation");
+    }
+
+    public Iterator<JsonObject> execJsonItems() {
+        throw new JenaException("Unsupported Operation");
+    }
 
     public void abort() {
         if (stmt != null)

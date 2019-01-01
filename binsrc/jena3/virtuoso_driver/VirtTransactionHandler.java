@@ -39,7 +39,7 @@ public class VirtTransactionHandler extends TransactionHandlerBase implements XA
     private Boolean m_transactionsSupported = null;
     private ReadWrite readWrite;
 
-    protected ReadWrite getReadWrite() {
+    public ReadWrite getReadWrite() {
         return this.readWrite;
     }
 
